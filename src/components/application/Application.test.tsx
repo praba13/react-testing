@@ -54,5 +54,35 @@ describe('Application', () => {
 
     const nameElement2 = screen.getByLabelText('Name', { selector: 'input' });
     expect(nameElement2).toBeInTheDocument();
+
+    /** getByPlaceholderText */
+
+    const nameElement3 = screen.getByPlaceholderText('Fullname');
+    expect(nameElement3).toBeInTheDocument();
+
+    /** getByText */
+
+    const paragraphElement = screen.getByText('All fields are mandatory');
+    expect(paragraphElement).toBeInTheDocument();
+
+    /** getByDisplayValue */
+
+    const nameElement4 = screen.getByDisplayValue('Vishwas');
+    expect(nameElement4).toBeInTheDocument();
+
+    /** getByAltText */
+
+    const imageElement = screen.getByAltText('a person with a laptop');
+    expect(imageElement).toBeInTheDocument();
+
+    /** getByTitle */
+
+    const closeElement = screen.getByTitle('close');
+    expect(closeElement).toBeInTheDocument();
+
+    /** getByTestId */
+
+    const customElement = screen.getByTestId('custom-element');
+    expect(customElement).toBeInTheDocument();
   });
 });
