@@ -41,5 +41,18 @@ describe('Application', () => {
 
     const sectionHeading = screen.getByRole('heading', { level: 2 });
     expect(sectionHeading).toBeInTheDocument();
+
+    /** getByLabelText */
+
+    //const nameElement2 = screen.getByLabelText('Name');
+    //expect(nameElement2).toBeInTheDocument();
+
+    const termsElement2 = screen.getByLabelText(
+      'I agree to the terms and conditions'
+    );
+    expect(termsElement2).toBeInTheDocument();
+
+    const nameElement2 = screen.getByLabelText('Name', { selector: 'input' });
+    expect(nameElement2).toBeInTheDocument();
   });
 });
