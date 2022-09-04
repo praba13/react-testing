@@ -10,6 +10,12 @@ describe('Application', () => {
     //const nameElement = screen.getByRole('textbox');
     //expect(nameElement).toBeInTheDocument();
 
+    const nameElement = screen.getByRole('textbox', { name: 'Name' }); //label Name
+    expect(nameElement).toBeInTheDocument();
+
+    const bioElement = screen.getByRole('textbox', { name: 'Bio' }); //label Name
+    expect(bioElement).toBeInTheDocument();
+
     const jobLocationElement = screen.getByRole('combobox');
     expect(jobLocationElement).toBeInTheDocument();
 
@@ -18,5 +24,22 @@ describe('Application', () => {
 
     const submitElement = screen.getByRole('button');
     expect(submitElement).toBeInTheDocument();
+
+    {
+      /*
+    const pageHeading = screen.getByRole('heading', {
+      name: 'Job application form'
+    });
+    expect(pageHeading).toBeInTheDocument();
+    */
+    }
+
+    const pageHeading = screen.getByRole('heading', {
+      level: 1
+    });
+    expect(pageHeading).toBeInTheDocument();
+
+    const sectionHeading = screen.getByRole('heading', { level: 2 });
+    expect(sectionHeading).toBeInTheDocument();
   });
 });
