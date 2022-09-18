@@ -7,6 +7,7 @@ import Formular from './components/Form/Formular';
 import { MuiMode } from './components/mui/MuiMode';
 import { Skills } from './components/skills/Skills';
 import { AppProviders } from './providers/AppProviders';
+import { CounterTwo } from './components/counter-two/CounterTwo';
 
 function App() {
   return (
@@ -15,6 +16,10 @@ function App() {
         {/*<Application />*/}
         {/*<Skills skills={['HTML', 'CSS']} />*/}
         {/*<Counter />*/}
+        <Application />
+        <Skills skills={['HTML', 'CSS']} />
+        <Counter />
+        <CounterTwo count={1} />
         <MuiMode />
       </div>
     </AppProviders>
