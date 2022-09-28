@@ -1,7 +1,7 @@
 //import { render, screen } from '@testing-library/react';
-import { render, screen } from '../../test-utils';
-import { AppProviders } from '../../providers/AppProviders';
-import { MuiMode } from './MuiMode';
+import { render, screen } from '../../test-utils'
+import { AppProviders } from '../../providers/AppProviders'
+import { MuiMode } from './MuiMode'
 
 describe('MuiMode', () => {
   test('renders text correctly', () => {
@@ -12,8 +12,8 @@ describe('MuiMode', () => {
     });
     */
     }
-    render(<MuiMode />); // so gehts with test-utils
-    const headingElement = screen.getByRole('heading');
-    expect(headingElement).toHaveTextContent('dark mode');
-  });
-});
+    render(<MuiMode />) // so gehts with test-utils
+    const headingElement = screen.getByRole('heading')
+    expect(headingElement).toHaveTextContent('dark mode')
+  })
+})
